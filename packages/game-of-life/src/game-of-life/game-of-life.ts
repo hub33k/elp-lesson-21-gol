@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export class GameOfLife {
   row: number;
   col: number;
@@ -31,9 +33,16 @@ export class GameOfLife {
     let count = 0;
     for (let i = row - 1; i <= row + 1; i++) {
       for (let j = col - 1; j <= col + 1; j++) {
-        if ((i === row && j === col) || i < 0 || j < 0) {
+        if (
+          (i === row && j === col) ||
+          i < 0 ||
+          j < 0 ||
+          i >= this.row ||
+          j >= this.row
+        ) {
           continue;
         }
+
         if (this.getCell(i, j)) {
           count++;
         }
@@ -43,10 +52,16 @@ export class GameOfLife {
   }
 
   tick() {
-    this.board = [
-      [0, 0, 0],
-      [0, 0, 0],
-      [0, 0, 0],
-    ];
+    const tempBoard = _.cloneDeep(this.board);
+    const tempBoard2 = _.cloneDeep(this.board);
+    tempBoard.forEach((row: number[], i: number) => {
+      row.forEach((cell: number, j: number) => {
+        const neighborCount = this.getNeighbors(i, j);
+        if (neighborCount < 2) {
+          tempBoard2[i][j] = 0;
+        }
+      });
+    });
+    this.board = tempBoard2;
   }
 }
