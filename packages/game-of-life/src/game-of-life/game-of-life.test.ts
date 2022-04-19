@@ -6,6 +6,7 @@ describe('GameOfLife', () => {
     const gameOfLife = new GameOfLife(3, 3);
 
     // given
+    gameOfLife.tick();
 
     // then
     expect(gameOfLife.getBoard()).toEqual([
@@ -21,6 +22,7 @@ describe('GameOfLife', () => {
 
     // given
     gameOfLife.setCell(1, 1);
+    gameOfLife.tick();
 
     // then
     expect(gameOfLife.getBoard()).toEqual([
@@ -30,7 +32,7 @@ describe('GameOfLife', () => {
     ]);
   });
 
-  it.only('should return the value of the provided cell', () => {
+  it('should return the value of the provided cell', () => {
     // when
     const gameOfLife = new GameOfLife(3, 3);
 
