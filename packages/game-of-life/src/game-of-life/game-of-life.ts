@@ -19,9 +19,12 @@ export class GameOfLife {
     return this.board;
   }
 
+  getCell(row: number, col: number) {
+    return this.board[row][col];
+  }
+
   setCell(row: number, col: number) {
     this.board[row][col] = 1;
-    this.tick();
   }
 
   private tick() {
