@@ -13,4 +13,10 @@ describe('cell', () => {
     const cell = new Cell(0, []);
     expect(cell.getState()).toBe(0);
   });
+
+  it('should change cell state', () => {
+    const cell = new Cell(0, []);
+    cell.changeState();
+    expect(cell.getState()).toBe(1);
+  });
 });
