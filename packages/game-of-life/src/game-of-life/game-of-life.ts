@@ -59,8 +59,6 @@ export class GameOfLife {
         const neighborCount = this.getNeighbors(i, j);
         if (neighborCount === 3) {
           tempBoard2[i][j] = 1;
-        } else if (neighborCount > 3) {
-          tempBoard2[i][j] = 0;
         } else if (neighborCount === 2 && this.getCell(i, j) === 1) {
           tempBoard2[i][j] = 1;
         } else {
