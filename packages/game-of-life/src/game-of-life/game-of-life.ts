@@ -2,6 +2,7 @@ export class GameOfLife {
   row: number;
   col: number;
   board: number[][];
+
   constructor(row: number, col: number) {
     this.row = row;
     this.col = col;
@@ -13,6 +14,7 @@ export class GameOfLife {
       }
     }
   }
+
   getBoard() {
     return this.board;
   }
