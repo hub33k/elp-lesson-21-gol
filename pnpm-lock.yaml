@@ -69,6 +69,7 @@ importers:
       jest: ^27.5.1
       lodash: ^4.17.21
       prettier: ^2.5.1
+      rimraf: ^3.0.2
       ts-jest: ^27.1.3
       ts-node: ^10.5.0
       typescript: ^4.5.5
@@ -80,6 +81,7 @@ importers:
       '@types/node': 17.0.23
       jest: 27.5.1_ts-node@10.7.0
       prettier: 2.6.2
+      rimraf: 3.0.2
       ts-jest: 27.1.4_9985e1834e803358b7be1e6ce5ca0eea
       ts-node: 10.7.0_ee885bc7281b682b6adbed6ae09ee090
       typescript: 4.6.3
