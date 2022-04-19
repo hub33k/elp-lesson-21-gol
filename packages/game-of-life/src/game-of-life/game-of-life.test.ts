@@ -59,4 +59,26 @@ describe('GameOfLife', () => {
     // then
     expect(gameOfLife.getNeighbors(0, 1)).toEqual(2);
   });
+
+  it('should kill cells with one neighbour', () => {
+    // when
+    const gameOfLife = new GameOfLife(3, 3);
+
+    // given
+    // [0, 0, 0],
+    // [1, 1, 1],
+    // [0, 0, 0],
+    gameOfLife.setCell(1, 0);
+    gameOfLife.setCell(1, 1);
+    gameOfLife.setCell(1, 2);
+
+    gameOfLife.tick();
+
+    // then
+    expect(gameOfLife.getBoard()).toEqual([
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0],
+    ]);
+  });
 });
