@@ -18,4 +18,17 @@ export class GameOfLife {
   getBoard() {
     return this.board;
   }
+
+  setCell(row: number, col: number) {
+    this.board[row][col] = 1;
+    this.tick();
+  }
+
+  private tick() {
+    this.board = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
+  }
 }
