@@ -27,7 +27,7 @@ export class GameOfLife {
     this.board[row][col] = 1;
   }
 
-  private tick() {
+  tick() {
     this.board = [
       [0, 0, 0],
       [0, 0, 0],
