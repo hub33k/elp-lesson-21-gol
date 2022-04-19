@@ -1,0 +1,27 @@
+{
+  "name": "monorepo-template",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "hub33k",
+  "license": "unlicensed",
+  "homepage": "https://github.com/hub33k/elp-app-1#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hub33k/elp-app-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hub33k/elp-app-1/issues"
+  },
+  "scripts": {
+    "client:start": "pnpm --filter client dev",
+    "common:build": "pnpm --filter common build",
+    "server:start": "pnpm --filter server start:debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
