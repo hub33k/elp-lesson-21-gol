@@ -135,9 +135,11 @@ describe('GameOfLife', () => {
     // [1, 1, 1],
     // [1, 1, 0],
     // [0, 0, 0],
+    gameOfLife.setCell(0, 0);
+    gameOfLife.setCell(0, 1);
+    gameOfLife.setCell(0, 2);
     gameOfLife.setCell(1, 0);
     gameOfLife.setCell(1, 1);
-    gameOfLife.setCell(2, 1);
 
     gameOfLife.tick();
 
