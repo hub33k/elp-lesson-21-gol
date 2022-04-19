@@ -81,4 +81,27 @@ describe('GameOfLife', () => {
       [0, 0, 0],
     ]);
   });
+
+  it('should make/keep the cell alive if it has 3 neighbors', () => {
+    // when
+    const gameOfLife = new GameOfLife(3, 3);
+
+    // given
+    // [1, 0, 0],
+    // [1, 1, 0],
+    // [0, 0, 1],
+    gameOfLife.setCell(0, 0);
+    gameOfLife.setCell(1, 0);
+    gameOfLife.setCell(1, 1);
+    gameOfLife.setCell(2, 2);
+
+    gameOfLife.tick();
+
+    // then
+    expect(gameOfLife.getBoard()).toEqual([
+      [1, 1, 0],
+      [1, 1, 0],
+      [0, 0, 0],
+    ]);
+  });
 });
