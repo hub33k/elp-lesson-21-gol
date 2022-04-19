@@ -1,21 +1,9 @@
 import type { NextPage } from 'next';
-import common, { IHello } from 'common';
-
-class Hello implements IHello {
-  name: string;
-  range: number;
-
-  constructor(name: string, range: number) {
-    this.name = name;
-    this.range = range;
-  }
-}
+import { GameOfLife } from 'game-of-life';
 
 const HomePage: NextPage = () => {
-  console.log(common);
-
-  const hello = new Hello('World', 30);
-  console.log(hello);
+  const gol = new GameOfLife(3, 3);
+  console.log(gol);
 
   return (
     <>

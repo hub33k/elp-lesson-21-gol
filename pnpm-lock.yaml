@@ -24,6 +24,7 @@ importers:
       eslint-config-next: 12.1.4
       eslint-plugin-cypress: ^2.12.1
       eslint-plugin-testing-library: ^5.2.1
+      game-of-life: workspace:*
       jest: ^27.5.1
       next: 12.1.4
       react: 18.0.0
@@ -32,6 +33,7 @@ importers:
       typescript: 4.6.3
     dependencies:
       common: link:../common
+      game-of-life: link:../game-of-life
       next: 12.1.4_react-dom@18.0.0+react@18.0.0
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0

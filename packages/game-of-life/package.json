@@ -1,5 +1,7 @@
 {
   "name": "game-of-life",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "prebuild": "rimraf ./dist",
