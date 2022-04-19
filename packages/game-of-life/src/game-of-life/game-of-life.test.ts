@@ -76,9 +76,9 @@ describe('GameOfLife', () => {
 
     // then
     expect(gameOfLife.getBoard()).toEqual([
-      [0, 0, 0],
       [0, 1, 0],
-      [0, 0, 0],
+      [0, 1, 0],
+      [0, 1, 0],
     ]);
   });
 
@@ -101,7 +101,7 @@ describe('GameOfLife', () => {
     expect(gameOfLife.getBoard()).toEqual([
       [1, 1, 0],
       [1, 1, 0],
-      [0, 0, 0],
+      [0, 1, 0],
     ]);
   });
 });
