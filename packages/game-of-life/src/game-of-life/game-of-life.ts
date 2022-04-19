@@ -27,6 +27,26 @@ export class GameOfLife {
     this.board[row][col] = 1;
   }
 
+  getNeighbors(row: number, col: number) {
+    let count = 0;
+    for (let i = row - 1; i <= row + 1; i++) {
+      for (let j = col - 1; j <= col + 1; j++) {
+        if (i === row && j === col) {
+          continue;
+        }
+        if (i < 0 || j < 0) {
+          console.log('not in board');
+          continue;
+        }
+        if (this.getCell(i, j)) {
+          count++;
+        }
+      }
+    }
+    console.log('neighbors count', count);
+    return count;
+  }
+
   tick() {
     this.board = [
       [0, 0, 0],
