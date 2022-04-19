@@ -126,4 +126,26 @@ describe('GameOfLife', () => {
       [1, 1, 0],
     ]);
   });
+
+  it('should kill cells with more than 3 neighbors', () => {
+    // when
+    const gameOfLife = new GameOfLife(3, 3);
+
+    // given
+    // [1, 1, 1],
+    // [1, 1, 0],
+    // [0, 0, 0],
+    gameOfLife.setCell(1, 0);
+    gameOfLife.setCell(1, 1);
+    gameOfLife.setCell(2, 1);
+
+    gameOfLife.tick();
+
+    // then
+    expect(gameOfLife.getBoard()).toEqual([
+      [1, 0, 1],
+      [1, 0, 1],
+      [0, 0, 0],
+    ]);
+  });
 });
