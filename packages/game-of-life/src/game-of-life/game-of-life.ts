@@ -31,11 +31,7 @@ export class GameOfLife {
     let count = 0;
     for (let i = row - 1; i <= row + 1; i++) {
       for (let j = col - 1; j <= col + 1; j++) {
-        if (i === row && j === col) {
-          continue;
-        }
-        if (i < 0 || j < 0) {
-          console.log('not in board');
+        if ((i === row && j === col) || i < 0 || j < 0) {
           continue;
         }
         if (this.getCell(i, j)) {
@@ -43,7 +39,6 @@ export class GameOfLife {
         }
       }
     }
-    console.log('neighbors count', count);
     return count;
   }
 
