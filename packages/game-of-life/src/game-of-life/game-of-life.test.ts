@@ -1,7 +1,15 @@
-import GameOfLife from './game-of-life';
-
 describe('GameOfLife', () => {
-  it('should pass', () => {
-    expect(GameOfLife.test).toBe(1);
+  it('should return empty board', () => {
+    // when
+    const gameOfLife = new GameOfLife(3, 3);
+
+    // given
+
+    // then
+    expect(gameOfLife.getBoard()).toEqual([
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ]);
   });
 });
