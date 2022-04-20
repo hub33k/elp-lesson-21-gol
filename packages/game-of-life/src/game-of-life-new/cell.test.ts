@@ -6,6 +6,11 @@ class Cell {
   public getState(): ICellState {
     return this.state;
   }
+
+  public changeState(): ICellState {
+    this.state = this.state === 1 ? 0 : 1;
+    return this.state;
+  }
 }
 
 describe('cell', () => {
